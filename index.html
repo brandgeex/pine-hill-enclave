@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pine Hill Enclave - A Private Highland Retreat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="LOGO.svg" alt="Pine Hill Enclave Logo" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#properties" class="nav-link">Properties</a></li>
+                <li><a href="#agents" class="nav-link">Team</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#location" class="nav-link">Location</a></li>
+                <li><a href="#comparison" class="nav-link">Comparison</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>A Private Highland Retreat</h1>
+            <p>Nestled at over 8,000 feet in the Galiyat region of Pakistan</p>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Enter your contact information for plot availability">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="properties">
+        <div class="container">
+            <h2>Plot Categories</h2>
+            <div class="properties-grid">
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Valley View Plot">
+                        <div class="property-badge premium">Valley View</div>
+                    </div>
+                    <div class="property-info">
+                        <h3>Premium Valley View</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kuzagali, Galiyat Pakistan</p>
+                        <div class="property-details">
+                            <span><i class="fas fa-eye"></i> Panoramic valley views</span>
+                            <span><i class="fas fa-mountain"></i> 8,000 ft elevation</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1 Kanal plot</span>
+                        </div>
+                        <div class="property-features">
+                            <span><i class="fas fa-road"></i> Year-round access</span>
+                            <span><i class="fas fa-shield-alt"></i> Gated community</span>
+                            <span><i class="fas fa-wifi"></i> High-speed internet</span>
+                            <span><i class="fas fa-tint"></i> Sustainable water</span>
+                        </div>
+                        <div class="property-price">PKR 12 cr.</div>
+                        <button class="view-details-btn">Inquire Now</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Forest View Plot">
+                        <div class="property-badge standard">Forest View</div>
+                    </div>
+                    <div class="property-info">
+                        <h3>Forest View</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kuzagali, Galiyat Pakistan</p>
+                        <div class="property-details">
+                            <span><i class="fas fa-tree"></i> Dense pine forest views</span>
+                            <span><i class="fas fa-mountain"></i> 8,000 ft elevation</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1 Kanal plot</span>
+                        </div>
+                        <div class="property-features">
+                            <span><i class="fas fa-road"></i> Year-round access</span>
+                            <span><i class="fas fa-shield-alt"></i> Gated community</span>
+                            <span><i class="fas fa-wifi"></i> High-speed internet</span>
+                            <span><i class="fas fa-tint"></i> Sustainable water</span>
+                        </div>
+                        <div class="property-price">PKR 10 cr.</div>
+                        <button class="view-details-btn">Inquire Now</button>
+                    </div>
+                </div>
+
+                <div class="property-card">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Pine View Plot">
+                        <div class="property-badge basic">Pine View</div>
+                    </div>
+                    <div class="property-info">
+                        <h3>Pine View</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Kuzagali, Galiyat Pakistan</p>
+                        <div class="property-details">
+                            <span><i class="fas fa-tree"></i> Pine tree views</span>
+                            <span><i class="fas fa-mountain"></i> 8,000 ft elevation</span>
+                            <span><i class="fas fa-ruler-combined"></i> 1 Kanal plot</span>
+                        </div>
+                        <div class="property-features">
+                            <span><i class="fas fa-road"></i> Year-round access</span>
+                            <span><i class="fas fa-shield-alt"></i> Gated community</span>
+                            <span><i class="fas fa-wifi"></i> High-speed internet</span>
+                            <span><i class="fas fa-tint"></i> Sustainable water</span>
+                        </div>
+                        <div class="property-price">PKR 8 cr.</div>
+                        <button class="view-details-btn">Inquire Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Team Section -->
+    <section id="agents" class="agents">
+        <div class="container">
+            <h2>Our Development Team</h2>
+            <div class="agents-grid">
+                <div class="agent-card">
+                    <div class="agent-info">
+                        <h3>Marshall Business Management</h3>
+                        <p class="agent-title">Project Developers</p>
+                        <p class="agent-stats">Integrity • High Standards • Long-term Commitment</p>
+                        <p class="agent-description">Leading the development with proven expertise in premium residential projects and community planning.</p>
+                        <div class="agent-contact">
+                            <a href="tel:+923212842222"><i class="fas fa-phone"></i> +92 321 284 2222</a>
+                            <a href="mailto:contact@pinehillenclave.com"><i class="fas fa-envelope"></i> contact@pinehillenclave.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agent-card">
+                    <div class="agent-info">
+                        <h3>Well-Known Designers & Architects</h3>
+                        <p class="agent-title">Premium Design & Construction</p>
+                        <p class="agent-stats">Modern Aesthetics • Local Sensibility • Timeless Design</p>
+                        <p class="agent-description">Collaborating with renowned architects and designers to create homes that blend modern luxury with natural surroundings.</p>
+                        <div class="agent-contact">
+                            <a href="#"><i class="fas fa-home"></i> Custom Home Designs</a>
+                            <a href="#"><i class="fas fa-tools"></i> Professional Construction</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agent-card">
+                    <div class="agent-info">
+                        <h3>Infrastructure & Community Planning</h3>
+                        <p class="agent-title">Quality & Sustainability</p>
+                        <p class="agent-stats">Roads • Drainage • Utilities • High-speed Internet</p>
+                        <p class="agent-description">Comprehensive infrastructure development ensuring year-round accessibility and modern amenities for the community.</p>
+                        <div class="agent-contact">
+                            <a href="#"><i class="fas fa-road"></i> Year-round Access</a>
+                            <a href="#"><i class="fas fa-tint"></i> Sustainable Water Solutions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Pine Hill Enclave</h2>
+                    <p>Nestled at over 8,000 feet in the Galiyat region of Pakistan, Pine Hill Enclave is a private and elevated residential enclave designed for those seeking privacy, natural beauty, and long-term value. Developed by Marshall Business Management, the project is not a mass-market housing scheme — it is a carefully planned release of a limited number of 1-kanal plots, directly offered by the landowner to a handpicked group of individuals who share the vision of an exclusive, nature-immersed lifestyle.</p>
+                    <p>The development 80KM (2 hours drive) from Zero Point Islamabad, lies along the Murree–Abbottabad Road with year-round road access, stunning pine forest surroundings, and panoramic mountain views. Our mission is to build a gated community where infrastructure comes first: roads, drainage, utilities, high-speed internet, and sustainable water solutions.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>8,000+</h3>
+                            <p>Feet Elevation</p>
+                        </div>
+                        <div class="stat">
+                            <h3>80KM</h3>
+                            <p>From Islamabad</p>
+                        </div>
+                        <div class="stat">
+                            <h3>Limited</h3>
+                            <p>Plot Availability</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80" alt="About Us">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section id="location" class="location-map">
+        <div class="container">
+            <h2>Our Location</h2>
+            <p>Discover Pine Hill Enclave nestled in the heart of Galiyat, Pakistan</p>
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-info">
+                    <div class="map-details">
+                        <h3><i class="fas fa-map-marker-alt"></i> Pine Hill Enclave</h3>
+                        <p><strong>Location:</strong> Kuzagali, Galiyat Region, Pakistan</p>
+                        <p><strong>Elevation:</strong> 8,000+ feet above sea level</p>
+                        <p><strong>Distance from Islamabad:</strong> 80KM (2 hours drive)</p>
+                        <p><strong>Access:</strong> Year-round road access via Murree-Abbottabad Road</p>
+                        <div class="map-features">
+                            <span><i class="fas fa-mountain"></i> Panoramic Views</span>
+                            <span><i class="fas fa-tree"></i> Pine Forests</span>
+                            <span><i class="fas fa-road"></i> Highway Access</span>
+                            <span><i class="fas fa-shield-alt"></i> Gated Community</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <h2>Exclusive Pricing & Nearby Market Insight</h2>
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Pine Hill Enclave</th>
+                            <th>Blue Pine</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Location</strong></td>
+                            <td><i class="fas fa-check-circle"></i> Main Murree-Abbotabad Road</td>
+                            <td><i class="fas fa-times-circle"></i> 5KM off Main Road</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Views</strong></td>
+                            <td><i class="fas fa-check-circle"></i> Panoramic Valley View + Forests</td>
+                            <td><i class="fas fa-times-circle"></i> Minimal or obstructed views</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Plot Size</strong></td>
+                            <td><i class="fas fa-check-circle"></i> 600 sq. yards (1 kanal)</td>
+                            <td><i class="fas fa-minus-circle"></i> 500 - 600 sq. yard</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Development Style</strong></td>
+                            <td><i class="fas fa-check-circle"></i> Low-density, spacious layout</td>
+                            <td><i class="fas fa-times-circle"></i> Cramped and congested</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accessibility</strong></td>
+                            <td><i class="fas fa-check-circle"></i> Year-round, direct highway access</td>
+                            <td><i class="fas fa-times-circle"></i> Narrow, limited-access roads</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Price per Plot (1 kanal)</strong></td>
+                            <td><i class="fas fa-equals"></i> PKR 10 cr.</td>
+                            <td><i class="fas fa-equals"></i> PKR 10 cr.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ownership Type</strong></td>
+                            <td><i class="fas fa-check-circle"></i> Direct from Landowner</td>
+                            <td><i class="fas fa-times-circle"></i> Developer/investor inventory</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Community Vision</strong></td>
+                            <td><i class="fas fa-check-circle"></i> Long-term residential living</td>
+                            <td><i class="fas fa-times-circle"></i> Mixed-use, investment-focused</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="comparison-summary">
+                <h3>Why Choose Pine Hill Enclave?</h3>
+                <p>While both developments offer similar pricing, Pine Hill Enclave provides superior value through its prime location, panoramic views, spacious layout, and direct landowner ownership. Our focus on long-term residential living ensures a quality community for generations to come.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Vision Section -->
+    <section id="mission" class="mission">
+        <div class="container">
+            <div class="mission-content">
+                <div class="mission-text">
+                    <h2>Mission and Vision</h2>
+                    <div class="mission-card">
+                        <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                        <p>Our mission defines what we stand for today — creating a high-quality, private mountain community built on integrity, sustainability, and timeless design. We ensure that every aspect of our work — from infrastructure to construction to ongoing maintenance — reflects care, precision, and accountability.</p>
+                    </div>
+                    <div class="mission-card">
+                        <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                        <p>Our vision looks ahead — to a future where Pine Hill becomes a model for thoughtful living, natural harmony, and enduring value for generations to come. We invite you to connect with us directly to learn more about plot availability, home design options, and how you can become part of this unique mountain community.</p>
+                    </div>
+                    <div class="cta-section">
+                        <h3>Let's build something timeless together.</h3>
+                        <p>Reach out today and take the first step toward owning a piece of Pine Hill — where nature, privacy, and modern living come together in perfect balance.</p>
+                        <a href="#contact" class="cta-btn">Contact Us Today</a>
+                    </div>
+                </div>
+                <div class="mission-image">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mountain Landscape">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Kuzagali, Galiyat Region, Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+92 321 284 2222</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@pinehillenclave.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Website</h4>
+                            <p>www.pinehillenclave.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <select id="inquiry" name="inquiry">
+                                <option value="">Select Inquiry Type</option>
+                                <option value="plot">Plot Availability</option>
+                                <option value="design">Home Design Options</option>
+                                <option value="visit">Site Visit</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pine Hill Enclave</h3>
+                    <p>A private highland retreat where nature, privacy, and modern living come together.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#agents">Team</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#comparison">Comparison</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="plot-availability.html">Plot Availability</a></li>
+                        <li><a href="#">Home Design Options</a></li>
+                        <li><a href="#">Infrastructure Development</a></li>
+                        <li><a href="#">Site Visits</a></li>
+                        <li><a href="#">Community Planning</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to our newsletter for the latest development updates.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pine Hill Enclave. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="brandgeex-credit">This website was built by <a href="https://brandgeex.com" target="_blank">BrandGeex.com</a></div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
