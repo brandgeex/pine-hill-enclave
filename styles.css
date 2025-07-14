@@ -1351,3 +1351,28 @@ body {
         font-size: 1rem;
     }
 } 
+
+/* Highlighted pricing statement above the grid */
+.plot-pricing-highlight {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #17614a;
+  background: #f3f8f5;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  margin: 1.5rem 0 2rem 0;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+/* Extra spacing and style for the section intro below the grid */
+.section-intro-below {
+  margin-top: 2.5rem !important;
+  font-size: 1.08rem;
+  color: #444;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+} 
