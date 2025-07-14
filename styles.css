@@ -26,7 +26,7 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     transition: all 0.3s ease;
 }
 
@@ -46,9 +46,9 @@ body {
 }
 
 .logo-img {
-    height: 90px;
+    height: 130px;
     width: auto;
-    max-width: 400px;
+    max-width: 500px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
@@ -862,8 +862,12 @@ body {
     }
 
     .logo-img {
-        height: 70px;
-        max-width: 250px;
+        height: 100px;
+        max-width: 360px;
+    }
+
+    .navbar {
+        padding: 0.3rem 0;
     }
 
     .hamburger {
@@ -1305,5 +1309,45 @@ body {
     .design-main ul, .design-main ol {
         margin-left: 1rem;
         font-size: 0.98rem;
+    }
+} 
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-shadow: 0 4px 24px rgba(44,85,48,0.25), 0 1px 2px rgba(0,0,0,0.18);
+    margin-bottom: 1.2rem;
+    font-family: 'Inter', sans-serif;
+}
+.hero-subtitle {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #f8f9fa;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(44,85,48,0.18);
+}
+.hero-highlight {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffd700;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 8px rgba(44,85,48,0.18);
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.1rem;
+    }
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+    .hero-highlight {
+        font-size: 1rem;
     }
 } 

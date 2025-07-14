@@ -431,6 +431,11 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Islamabad International Airport",
             coords: [33.5491, 72.8258],
             description: "International Airport serving Islamabad"
+        },
+        {
+            name: "Nathiagali",
+            coords: [34.0724, 73.3810],
+            description: "Popular hill station in Galiyat, 20 km from Pine Hill Enclave"
         }
     ];
 
