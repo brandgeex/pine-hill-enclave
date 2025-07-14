@@ -426,6 +426,11 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Islamabad",
             coords: [33.6844, 73.0479],
             description: "Capital city - 80 kilometers away"
+        },
+        {
+            name: "Islamabad International Airport",
+            coords: [33.5491, 72.8258],
+            description: "International Airport serving Islamabad"
         }
     ];
 
