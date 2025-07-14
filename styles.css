@@ -1376,3 +1376,15 @@ body {
   margin-right: auto;
   line-height: 1.7;
 } 
+
+/* Homepage navbar with hero background image and strong overlay for readability */
+.homepage-navbar {
+  background: linear-gradient(rgba(24, 41, 32, 0.82), rgba(24, 41, 32, 0.82)),
+    url('backgroundchangla.JPG') center center/cover no-repeat;
+  transition: background 0.3s;
+}
+
+.homepage-navbar .nav-link,
+.homepage-navbar .logo-img {
+  color: #fff !important;
+} 
