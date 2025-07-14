@@ -162,6 +162,30 @@ body {
     background: #1e3a22;
 }
 
+/* Hero CTA Button */
+.hero-cta-btn {
+    width: 100%;
+    max-width: 350px;
+    background: #2c5530;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 1.5rem;
+    letter-spacing: 0.5px;
+    outline: none;
+    display: inline-block;
+}
+.hero-cta-btn:hover, .hero-cta-btn:focus {
+    background: #1e3a22;
+    color: #fff;
+    text-decoration: none;
+}
+
 /* Properties Section */
 .properties {
     padding: 5rem 0;

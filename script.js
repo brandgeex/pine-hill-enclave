@@ -96,27 +96,20 @@ if (newsletterForm) {
     });
 }
 
-// Property search functionality
-const searchInput = document.querySelector('.search-box input');
-const searchBtn = document.querySelector('.search-btn');
-
-if (searchBtn) {
-    searchBtn.addEventListener('click', () => {
-        const searchTerm = searchInput.value.trim();
-        if (searchTerm) {
-            // Simulate search functionality
-            showNotification(`Searching for: ${searchTerm}`, 'info');
-            // In a real application, this would filter properties or redirect to search results
+// Add hero contact form handling
+const heroContactForm = document.getElementById('heroContactForm');
+if (heroContactForm) {
+    heroContactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('heroName').value.trim();
+        const contact = document.getElementById('heroContact').value.trim();
+        const message = document.getElementById('heroMessage').value.trim();
+        if (!contact) {
+            showNotification('Please enter your email or phone number.', 'error');
+            return;
         }
-    });
-}
-
-// Enter key for search
-if (searchInput) {
-    searchInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            searchBtn.click();
-        }
+        showNotification('Thank you! We have received your request and will contact you soon.', 'success');
+        this.reset();
     });
 }
 
